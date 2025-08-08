@@ -17,7 +17,7 @@ export default function ClockFace() {
     const hourDeg = ((hours % 12) + minutes / 60 ) * 30;
 
     return (
-        <div className="w-full h-full aspect-square relative rounded-full border-4 border-white bg-(--text-color) shadow-xl">
+        <div className="w-full h-full aspect-square relative rounded-full border-4 border-[var(--accent-color)] bg-(--text-color) shadow-xl">
       {/* Hour hand */}
       <div
         className="absolute w-[2%] h-[30%] bg-(--bg-color) left-1/2 top-[20%] origin-bottom rounded"

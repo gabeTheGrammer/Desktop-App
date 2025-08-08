@@ -1,0 +1,26 @@
+.editor {
+    max-height: 35vh;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+.editor > * {
+  margin: 0 !important;
+}
+
+.ProseMirror {
+    max-height: 100% !important;
+    overflow: auto;
+    height: 35vh;
+    scrollbar-width: none;
+}
+
+.ProseMirror:focus {
+    outline-color: var(--accent-color);
+    outline-offset: 0.25rem;
+}
+
+.style-button {
+    border-radius: 0 !important;
+}
+

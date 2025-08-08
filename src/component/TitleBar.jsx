@@ -20,7 +20,7 @@ export default function TitleBar() {
     }
     return (
         <div className="title-bar h-5/100 text-foreground">
-            <h3 className="left text-(--text-color)">Title</h3>
+            <h3 className="left text-(--text-color)"></h3>
             <div className="right h-full">
                 <button className="minimize-btn hover:bg-gray-500 hover:opacity-60 opacity-50 text-(--text-color)" onClick={handleMin}>_</button>
                 <button className="maximize-btn hover:bg-gray-500 hover:opacity-60 opacity-50 text-(--text-color)" onClick={handleMax}>□</button>

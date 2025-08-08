@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,6 +13,8 @@
   --text-color: black;
   --border-color: rgb(0, 0, 0);
   --bg-circle: rgb(202, 202, 202);
+  --accent-color: rgb(116, 116, 116);
+  --icon-filter: invert(0);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -23,12 +26,16 @@
   --text-color: rgb(211, 211, 211);
   --border-color: rgb(211, 211, 211);
   --bg-circle: rgb(85, 85, 85);
+  --accent-color: rgb(255, 0, 0);
+  --icon-filter: invert(1);
 }
 
 .pink-theme {
   --bg-color: rgb(228, 146, 146);
   --text-color: rgb(211, 211, 211);
   --border-color: rgb(211, 211, 211);
+  --accent-color: rgb(189, 120, 120);
+  --icon-filter: invert(1);
 }
 
 * {
@@ -98,4 +105,21 @@ html, body, #root {
   filter: blur(4px);
   animation: shimmer 4s ease-in-out infinite;
   animation: rise 10s linear infinite;
+}
+
+input:focus {
+  outline-color: var(--accent-color);
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: var(--icon-filter);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

@@ -1,4 +1,6 @@
-
+.main-app {
+  margin-top: -5vh;
+}
 
 #root {
   text-align: center;

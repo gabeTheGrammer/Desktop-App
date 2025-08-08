@@ -9,10 +9,17 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "electron": "cross-env NODE_ENV=development electron electron/main.js",
-    "start": "npm-run-all --parallel dev electron"
+    "start": "npm-run-all --parallel dev electron",
+    "start:go": "go run ./go",
+    "start-both": "concurrently \"npm run start:go\" \"npm run start\""
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
+    "@tiptap/extension-color": "^3.0.9",
+    "@tiptap/extension-text-style": "^3.0.9",
+    "@tiptap/react": "^3.0.9",
+    "@tiptap/starter-kit": "^3.0.9",
+    "quill": "^2.0.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tail": "^2.2.6"
@@ -24,6 +31,7 @@
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.6.0",
     "autoprefixer": "^10.4.21",
+    "concurrently": "^9.2.0",
     "cross-env": "^10.0.0",
     "electron": "^37.2.6",
     "eslint": "^9.30.1",
